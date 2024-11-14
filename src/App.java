@@ -41,13 +41,24 @@ public class App {
 
     public static int firstTwoSum(int[] nums) {
 
-        return -1; //this is a placeholder
+        if(nums.length >= 2){
+            return nums[0] + nums[1];
+        }else if(nums.length == 1){
+            return nums[0];
+        }else{
+            return 0;
+        }
 
     }
 
     public static int minWordLength(String sentence){
-
-
-        return -1; //this is a placeholder
+        String[] words = sentence.split(" ");
+        int minLength = words[0].length();
+        for (String word: words){
+            if(word.length()<minLength){
+                minLength = word.length();
+            }
+        }
+        return minLength;
     }
 }
